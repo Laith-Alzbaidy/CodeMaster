@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
+
+    :root {
+      --body-color: #f5f7fa;
+      --background-color: #ffffff;
+      --text-color: #333333;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-content: center;
+      font-family: 'Alexandria', sans-serif;
+      height: 100vh;
+      background-color: var(--body-color);
+      color: var(--text-color);
+      transition: all 2s;
+    }
+
+    div {
+      padding: 2rem 6rem;
+      border-radius: 20px;
+      max-width: 80rem;
+      text-align: center;
+      background-color: var(--background-color);
+      transition: all 2s;
+      margin: 1rem;
+      font-size: 8vmin;
+      line-height: 20vmin;
+      box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    div i {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 150px;
+      opacity: 0.2;
+    }
+    .moon {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-radius: 100px;
+      transition: all 2s;
+      box-shadow: inset 150px -20px #f8cc4a;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      right: 50px;
+      top: 50px;
+    }
+
+    .moon-dark {
+      box-shadow: inset 10px -10px #fff;
+      transform: rotate(-340deg);
+    }
+
+    .dark {
+      --body-color: #333333;
+      --background-color: #ff0000;
+      --text-color: #fc1c1c;
+    }
+  </style>
+
+  <body class="">
+    <i class="moon"></i>
+    <main>
+      <div>
+        <p>
+          حقُّ الجمال عليك أن تزهُو بهِ
+          <br />
+          ماجئت حُلــوًا هكـــذا لتُعاني !
+          <i class="fa-solid fa-quote-right"></i>
+        </p>
+      </div>
+    </main>
+    <script>
+      const moon = document.querySelector('.moon')
+      moon.addEventListener('click', () => {
+        moon.classList.toggle('moon-dark')
+        document.body.classList.toggle('dark')
+      })
+    </script>
+  </body>
+</html>
